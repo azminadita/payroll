@@ -10,9 +10,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <link rel="stylesheet" href="template/css/sb-admin-2.css">
+    <link rel="stylesheet" href="/css/sb-admin-2.css">
 
     <title>@yield('title')</title>
 
@@ -48,7 +50,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{route('home')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -63,10 +65,8 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="/pegawai/" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fa-solid fa-boxes-packing"></i>
-                    <span>Pegawai</span>
+                <a href="/pegawai/" class="nav-link">
+                   <span>Pegawai</span>
                 </a>
             </li>
 
