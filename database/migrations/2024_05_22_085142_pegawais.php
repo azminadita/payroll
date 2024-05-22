@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('pegawais', function (Blueprint $table) {
             $table->id();
+            $table->string('nip',20)->unique();
+            $table->string('nama',50);
+            $table->string('jabatan',50);
+            $table->string('alamat',100);
+            $table->string('no_telp',12);
             $table->timestamps();
         });
     }
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pegawais');
+        //
     }
 };

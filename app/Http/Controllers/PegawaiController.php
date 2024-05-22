@@ -32,13 +32,16 @@ class PegawaiController extends Controller
     {
         $peg = new pegawai;
         $peg->nip = $request->nip;
-        $peg->pegawai = $request->pegawai;
+        $peg->nama = $request->nama;
+        $peg->jabatan = $request->jabatan;
+        $peg->alamat = $request->alamat;
+        $peg->no_telp = $request->no_telp;
         $peg->save();
 
         return redirect('/pegawai/');
     }
 
-    /**
+    /*
      * Display the specified resource.
      */
     public function show(string $id)
