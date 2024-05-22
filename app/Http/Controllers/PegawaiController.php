@@ -82,6 +82,6 @@ class PegawaiController extends Controller
         $peg = Pegawai::find($id);
         $peg->delete();
 
-        return redirect('/Pegawai/');
+        return redirect('/pegawai/');
     }
 }
