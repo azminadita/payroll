@@ -52,20 +52,23 @@ class PegawaiController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $nip)
     {
-        $peg = Nama::find($id);
+        $peg = pegawai::find($nip);
         return view('pegawai.edit',compact('peg'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $nip)
     {
-        $peg = Nama::find($id);
+        $peg = pegawai::find($nip);
         $peg->nip = $request->nip;
         $peg->nama = $request->nama;
+        $peg->jabatan = $request->jabatan;
+        $peg->alamat = $request->alamat;
+        $peg->no_telp = $request->no_telp;
         $peg->save();
 
         return redirect('/pegawai/');
@@ -76,7 +79,7 @@ class PegawaiController extends Controller
      */
     public function destroy(string $id)
     {
-        $peg = Nama::find($id);
+        $peg = pegawai::find($id);
         $peg->delete();
 
         return redirect('/Pegawai/');

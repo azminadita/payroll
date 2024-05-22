@@ -28,17 +28,32 @@
         </div>
         </div>
         <div class="card-body">
-            <form method="POST" action="/pegawai/{{$peg->id}}">
+            <form method="POST" action="/pegawai/{{$peg->nip}}">
                 @method('PUT')
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Nip</label>
-                    <input type="text" name="kode" readonly value="{{$peg->kode}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" name="nip" readonly value="{{$peg->nip}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Nama</label>
                     <input type="text" name="pegawai" value="{{$peg->pegawai}}" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Jabatan</label>
+                    <input type="text" name="jabatan" value="{{$peg->jabatan}}" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Alamat</label>
+                    <input type="text" name="alamat" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">No telp</label>
+                    <input type="text" name="no_telp" value="{{$peg->no_telp}}" class="form-control" id="exampleInputPassword1">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Edit Data</button>
