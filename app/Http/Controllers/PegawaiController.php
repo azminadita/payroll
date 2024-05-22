@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pegawai;
 
 class PegawaiController extends Controller
 {
@@ -11,7 +12,9 @@ class PegawaiController extends Controller
      */
     public function index()
     {
-        //
+        $nomor = 1;
+        $peg = Pegawai::all(); //eloquent ORM
+        return view('pegawai.index',compact('nomor','peg'));
     }
 
     /**
