@@ -30,9 +30,9 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        $peg = new Nama;
+        $peg = new pegawai;
         $peg->nip = $request->nip;
-        $peg->nama = $request->jurusan;
+        $peg->pegawai = $request->pegawai;
         $peg->save();
 
         return redirect('/pegawai/');

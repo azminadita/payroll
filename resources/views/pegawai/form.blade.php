@@ -40,6 +40,23 @@
                     <input type="text" name="pegawai" class="form-control" id="exampleInputPassword1">
                 </div>
 
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Jabatan</label>
+                    <input type="text" name="jabatan" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Alamat</label>
+                    <input type="text" name="alamat" class="form-control" id="exampleInputPassword1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">No telp</label>
+                    <input type="text" name="no_telp" class="form-control" id="exampleInputPassword1">
+                </div>
+
+
+
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
             </form>
         </div>

@@ -34,6 +34,9 @@
                         <th>No</th>
                         <th>Nip</th>
                         <th>Nama</th>
+                        <th>Jabatan</th>
+                        <th>Alamat</th>
+                        <th>No telp</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -43,6 +46,9 @@
                         <td>{{$nomor++}}</td>
                         <td>{{$item->nip}}</td>
                         <td>{{$item->nama}}</td>
+                        <td>{{$item->jabatan}}</td>
+                        <td>{{$item->alamat}}</td>
+                        <td>{{$item->no_telp}}</td>
                         <td>
                             <a href="/pegawai/edit/{{$item->id}}" class="btn btn-info btn-sm"><i class="fa fa-pencil-alt"></i></a>
 
