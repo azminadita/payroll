@@ -28,17 +28,17 @@
         </div>
         </div>
         <div class="card-body">
-            <form method="POST" action="/pegawai/{{$peg->nip}}">
+            <form method="POST" action="/pegawai/{{$peg->id}}">
                 @method('PUT')
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Nip</label>
-                    <input type="text" name="nip" readonly value="{{$peg->nip}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" name="nip" readonly value="{{$peg->id}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Nama</label>
-                    <input type="text" name="pegawai" value="{{$peg->pegawai}}" class="form-control" id="exampleInputPassword1">
+                    <input type="text" name="nama" value="{{$peg->nama}}" class="form-control" id="exampleInputPassword1">
                 </div>
 
                 <div class="mb-3">
@@ -48,7 +48,7 @@
 
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Alamat</label>
-                    <input type="text" name="alamat" class="form-control" id="exampleInputPassword1">
+                    <input type="text" name="alamat"  value="{{$peg->alamat}}" class="form-control" id="exampleInputPassword1">
                 </div>
 
                 <div class="mb-3">

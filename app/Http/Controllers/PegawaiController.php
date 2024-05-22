@@ -52,18 +52,18 @@ class PegawaiController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $nip)
+    public function edit(string $id)
     {
-        $peg = pegawai::find($nip);
+        $peg = Pegawai::find($id);
         return view('pegawai.edit',compact('peg'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $nip)
+    public function update(Request $request, string $id)
     {
-        $peg = pegawai::find($nip);
+        $peg = pegawai::find($id);
         $peg->nip = $request->nip;
         $peg->nama = $request->nama;
         $peg->jabatan = $request->jabatan;
