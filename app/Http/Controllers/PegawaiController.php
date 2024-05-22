@@ -30,7 +30,7 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        $peg = new pegawai;
+        $peg = new Pegawai;
         $peg->nip = $request->nip;
         $peg->nama = $request->nama;
         $peg->jabatan = $request->jabatan;
@@ -63,7 +63,7 @@ class PegawaiController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $peg = pegawai::find($id);
+        $peg = Pegawai::find($id);
         $peg->nip = $request->nip;
         $peg->nama = $request->nama;
         $peg->jabatan = $request->jabatan;
@@ -79,7 +79,7 @@ class PegawaiController extends Controller
      */
     public function destroy(string $id)
     {
-        $peg = pegawai::find($id);
+        $peg = Pegawai::find($id);
         $peg->delete();
 
         return redirect('/Pegawai/');
