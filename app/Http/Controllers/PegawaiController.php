@@ -30,7 +30,12 @@ class PegawaiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $peg = new Nama;
+        $peg->nip = $request->nip;
+        $peg->nama = $request->jurusan;
+        $peg->save();
+
+        return redirect('/pegawai/');
     }
 
     /**
@@ -46,7 +51,8 @@ class PegawaiController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $peg = Nama::find($id);
+        return view('pegawai.edit',compact('peg'));
     }
 
     /**
@@ -54,7 +60,12 @@ class PegawaiController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $peg = Nama::find($id);
+        $peg->nip = $request->nip;
+        $peg->nama = $request->nama;
+        $peg->save();
+
+        return redirect('/pegawai/');
     }
 
     /**
@@ -62,6 +73,9 @@ class PegawaiController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $peg = Nama::find($id);
+        $peg->delete();
+
+        return redirect('/Pegawai/');
     }
 }
